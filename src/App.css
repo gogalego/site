@@ -1,0 +1,36 @@
+.header{
+    display: 'flex';
+    align-items: right;
+    background-color: rgb(234, 234, 236);
+    opacity: "0.5";
+    max-height: "100%";
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.logo-container{
+    height: 100%;
+    opacity: 0.2;
+}
+
+.logo{
+    max-height: 100%;
+    opacity: 0.2; 
+}
+
+.anchor-container{
+    font-size: 20px;
+    font-family: Poppins,sans-serif;
+}
+
+.anchor{
+    margin: 10px;
+    color: rgb(59, 59, 59);
+    font-weight: 700;
+}
+
+.anchor:hover{
+    color: rgb(59, 59, 59);
+    opacity: 0.7; 
+    
+}
