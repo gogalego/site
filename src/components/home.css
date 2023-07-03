@@ -11,5 +11,30 @@
     height: 100%;
     width: 100%;
     background-color: white;
-    border-radius: 10px;
+    box-shadow: 0px 1px 5px lightgray;
+    display: inline-flex
+}
+
+
+.home-profile-description{
+    background-color: lightgray;
+    width: 50%;
+    height: 100%;
+}
+
+.home-profile-photo-container{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.home-profile-photo{
+    width: 100%;
+    position: relative;
+    transform: scale(1.5); 
+    transition: transform 0.75s ease;
+}
+
+.home-profile-photo:hover {
+    transform: scale(1.75); 
 }
