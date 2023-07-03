@@ -17,15 +17,44 @@
 
 
 .home-profile-description{
-    background-color: lightgray;
-    width: 50%;
+    background-color: #ededed;
+    width: 100%;
     height: 100%;
+    font-family: Poppins,sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    color: #bbb;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    margin-bottom: 41px;
+}
+
+.home-profile-description > * {
+    background-color: #ededed;
 }
 
 .home-profile-photo-container{
-    width: 50%;
+    width: 500px;
     height: 100%;
     overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0;
+    transition: transform 2s ease;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1225px) {
+    .home-profile-photo-container{
+        width: 600px!important;
+    }
 }
 
 .home-profile-photo{
