@@ -1,13 +1,11 @@
 import React from 'react';
+
 const About = () => {
   return (
-    <div className="-mt-[6rem]">
+    <div className="about-container">
      
-        teste
-
-      <div className="mt-20 flex flex-wrap gap-10">
+    
       
-      </div>
     </div>
   );
 };

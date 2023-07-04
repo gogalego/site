@@ -35,6 +35,7 @@
 
 .home-profile-description > * {
     background-color: #ededed;
+    transition: font-size 0.5s;
 }
 
 .home-profile-description > *:hover {
