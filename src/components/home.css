@@ -57,7 +57,7 @@
 
 @media only screen and (max-width: 1225px) {
     .home-profile-photo-container{
-        width: 600px!important;
+        width: 600px;
     }
 }
 
@@ -101,4 +101,22 @@
 @-ms-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+
+/*  Mobile   */
+@media only screen and (max-width: 960px) {
+    .home-profile{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-profile-description{
+        margin-bottom: 0px;
+        height: 40%;
+    }
+
+    .home-profile-photo{
+        width: 100%;
+    }
 }
