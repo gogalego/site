@@ -12,29 +12,27 @@ enum jobTitleEnum{
 const Home = () => {
   const [ jobTitle , setJobTitle] = useState(jobTitleEnum.SoftwareDeveloper);
 
+
+  const handleIndex = () => {
+    switch(jobTitle){
+      case jobTitleEnum.SoftwareDeveloper:
+        setJobTitle(jobTitleEnum.FrontEnd);
+        break;
+      case jobTitleEnum.FrontEnd:
+        setJobTitle(jobTitleEnum.BackEnd);
+        break;
+      case jobTitleEnum.BackEnd:
+        setJobTitle(jobTitleEnum.SoftwareDeveloper);
+        break;
+      default:
+        setJobTitle(jobTitleEnum.SoftwareDeveloper);
+        break;
+    }
+  }
+
   useEffect(()=>{
-    const interval = setInterval(()=>{
-      switch(jobTitle){
-        case jobTitleEnum.SoftwareDeveloper:
-          setJobTitle(jobTitleEnum.FrontEnd);
-          break;
-        case jobTitleEnum.FrontEnd:
-          setJobTitle(jobTitleEnum.BackEnd);
-          break;
-        case jobTitleEnum.BackEnd:
-          setJobTitle(jobTitleEnum.SoftwareDeveloper);
-          break;
-        default:
-          setJobTitle(jobTitleEnum.SoftwareDeveloper);
-          break;
-      }
-    }, 2500);
-      
-      //Fix
-
-      return () => clearInterval(interval);
-
-    }, []);
+    setTimeout(handleIndex, 5000);
+  }, [jobTitle]);
 
   return (
     <div className="home-container">
@@ -42,7 +40,17 @@ const Home = () => {
         <div className='home-profile-description'>
             <p>Hello!</p>
             <p>Gonçalo Galego</p>
-            <p>{jobTitle}</p>
+
+            <p className='jobTitle' style={jobTitle === jobTitleEnum.SoftwareDeveloper? {display:'block'}:{display:'none'}}>
+              {jobTitleEnum.SoftwareDeveloper}
+            </p>
+            <p className='jobTitle' style={jobTitle === jobTitleEnum.FrontEnd? {display:'block'}:{display:'none'}}>
+              {jobTitleEnum.FrontEnd}
+            </p>
+            <p className='jobTitle' style={jobTitle === jobTitleEnum.BackEnd? {display:'block'}:{display:'none'}}>
+              {jobTitleEnum.BackEnd}
+            </p>
+
         </div>
         <div className='home-profile-photo-container'>
           <img  className='home-profile-photo' src={profileImage} alt="person"/>
@@ -51,5 +59,8 @@ const Home = () => {
     </div>
   );
 };
+
+
+
 
 export default Home;
