@@ -25,9 +25,8 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-
     color: #bbb;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 400;
     letter-spacing: .5px;
     margin-bottom: 41px;
@@ -56,9 +55,9 @@
     flex-direction: column;
 }
 
-@media only screen and (max-width: 1225px) {
+@media only screen and (max-width: 960px) {
     .home-profile-photo-container{
-        width: 600px;
+        width: 100%;
     }
 }
 
@@ -67,6 +66,12 @@
     position: relative;
     transform: scale(1.5); 
     transition: transform 0.75s ease;
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+     -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
 }
 
 .home-profile-photo:hover {
@@ -114,7 +119,7 @@
 
     .home-profile-description{
         margin-bottom: 0px;
-        height: 40%;
+        height: 50%;
     }
 
     .home-profile-photo{

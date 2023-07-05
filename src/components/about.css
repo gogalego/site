@@ -1,0 +1,15 @@
+* {
+    color: white;
+}
+
+.about-container{
+    border: 1px solid white;
+    min-height: 100vh;
+    padding: 100px;
+    font-family: Poppins,sans-serif;
+}
+
+.about-description{
+    letter-spacing: 1px;
+    text-align: justify;
+}
