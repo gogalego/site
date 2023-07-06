@@ -13,3 +13,43 @@
     letter-spacing: 1px;
     text-align: justify;
 }
+
+.about-skills-container{
+    width: 100%;
+    margin-top: 5rem;
+    min-height: 20rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.about-skill-item, .about-skill-item *{
+    background-color: #ededed;;
+}
+
+.about-skill-item{
+    min-height: 250px;
+    width: 225px;
+    box-shadow: 0px 0px 15px lightgray;
+    border: 1px solid #ededed;
+    border-radius: 25px;
+}
+
+.about-skill-item-content{
+    margin-top: 4rem;
+    width: 100%;
+    text-align: center;
+}
+
+.skill-title{
+    color:rgb(100 100 100);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.about-skill-item .skill-icon *{
+    color:rgb(100 100 100);
+    font-size: 4rem;
+    margin-top: 1.5rem;
+}
+

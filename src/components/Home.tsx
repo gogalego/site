@@ -8,7 +8,6 @@ enum jobTitleEnum{
   BackEnd ='Back-End'
 }
 
-
 const Home = () => {
   const [ jobTitle , setJobTitle] = useState(jobTitleEnum.SoftwareDeveloper);
 
@@ -46,6 +45,7 @@ const Home = () => {
             </p>
             <p className='jobTitle' style={jobTitle === jobTitleEnum.FrontEnd? {display:'block'}:{display:'none'}}>
               {jobTitleEnum.FrontEnd}
+              
             </p>
             <p className='jobTitle' style={jobTitle === jobTitleEnum.BackEnd? {display:'block'}:{display:'none'}}>
               {jobTitleEnum.BackEnd}
@@ -59,8 +59,5 @@ const Home = () => {
     </div>
   );
 };
-
-
-
 
 export default Home;
