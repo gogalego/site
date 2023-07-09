@@ -58,5 +58,11 @@
 
 .about-skill-item-content:hover{
     transform: scale(1.2);
-    
+}
+
+@media only screen and (max-width: 960px) {
+    .about-skill-item{
+        min-height: 225px;
+        width: 200px;
+    }
 }

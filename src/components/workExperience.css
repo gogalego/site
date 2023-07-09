@@ -55,4 +55,8 @@
     .work-list-item-resume{
         width: 100%;
     }
+
+    .work-list-item{
+        margin: 1rem;
+    }
 }

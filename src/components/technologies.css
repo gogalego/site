@@ -1,6 +1,6 @@
 .tec-container{
     padding: 5rem;
-    height: 100vh;
+    min-height: 100vh;
     min-height: 100vh;
 }
 
@@ -14,6 +14,14 @@
     display: inline-flex;
     flex-wrap: wrap;
     transition: transform 0.75s ease;
+}
+
+
+@media only screen and (max-width: 960px) {
+    .tec-list{
+        font-size: 5rem;
+        gap: 2rem;
+    }
 }
 
 .tec-list *{
