@@ -24,11 +24,8 @@ function App() {
         <WorkExperience />
 
       </Content>
-      <Footer
-        style={{
-          textAlign: 'center',
-        }}
-      >
+      <Footer className='footer'>
+       <h4>GoGalego</h4>
       </Footer>
     </Layout>
     </BrowserRouter>

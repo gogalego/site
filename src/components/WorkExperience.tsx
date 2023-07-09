@@ -1,6 +1,5 @@
 import React from 'react';
 import './workExperience.css';
-import { Divider } from 'antd';
 
 const experienceData = [
   {
@@ -15,7 +14,7 @@ const experienceData = [
   },
   {
     date: 'September, 2015 - September, 2018',
-    title: 'Computer Engineering Degree',
+    title: 'Computer Science Bachelor',
     company: 'ISEP, Porto'
   }
 ];

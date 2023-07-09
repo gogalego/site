@@ -48,6 +48,10 @@ h2{
     font-size: 1.8rem;
 }
 
+h4{
+    color: lightgray;
+}
+
 .content{
     display: flex;
     flex-direction: column;
@@ -57,5 +61,10 @@ h2{
 .content > div{
     max-width: 1500px;
     width: 100%;
+}
+
+.footer{
+    text-align: center;
+    background-color: black;
 }
 
