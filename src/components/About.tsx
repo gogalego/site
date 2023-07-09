@@ -1,6 +1,6 @@
 import React from 'react';
 import './about.css';
-import { FaPaintBrush, } from "react-icons/fa";
+import { FaPaintBrush } from "react-icons/fa";
 import { VscServerProcess } from "react-icons/vsc";
 import { SiAzuredevops } from "react-icons/si";
 
@@ -37,17 +37,6 @@ const About = () => {
             </p>
             <div className='skill-icon'>
              <VscServerProcess/>
-            </div>
-          </div>
-        </div>
-
-        <div className='about-skill-item'>
-          <div className='about-skill-item-content'>
-            <p className='skill-title'>
-              {skillTitleEnum.DevOps}
-            </p>
-            <div className='skill-icon'>
-             <SiAzuredevops/>
             </div>
           </div>
         </div>

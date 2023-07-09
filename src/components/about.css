@@ -3,9 +3,8 @@
 }
 
 .about-container{
-    border: 1px solid white;
     min-height: 100vh;
-    padding: 100px;
+    padding: 5rem;
     font-family: Poppins,sans-serif;
 }
 

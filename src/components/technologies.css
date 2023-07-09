@@ -1,0 +1,25 @@
+.tec-container{
+    padding: 5rem;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.tec-list{
+    width: 100%;
+    font-size: 7rem;
+    margin-top: 5rem;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+    transition: transform 0.75s ease;
+}
+
+.tec-list *{
+    color:#ededed;
+}
+
+.tec-list >svg:hover{
+    transform: scale(1.2);
+}

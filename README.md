@@ -8,5 +8,6 @@
 - [ ] Choose Font Family
 - [ ] Add Animations
 - [ ] Add css Mobile
+- [ ] Add Lazy Loading Profile Image
 - [ ] ...
 
