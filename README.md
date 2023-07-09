@@ -2,8 +2,8 @@
 
 - [x] Create Header
 - [x] Create About Section
-- [ ] Create About Projects
-- [ ] Create About Contacts
+- [x] Create About Projects
+- [x] Create About Contacts
 - [ ] Create New Logo
 - [ ] Choose Font Family
 - [ ] Add Animations
