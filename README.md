@@ -11,3 +11,13 @@
 - [ ] Add Lazy Loading Profile Image
 - [ ] ...
 
+
+
+## Tools
+
+# React Components
+https://ant.design
+
+# React Icons
+https://react-icons.github.io/react-icons
+

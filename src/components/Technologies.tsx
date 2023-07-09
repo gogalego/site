@@ -3,6 +3,7 @@ import './technologies.css';
 import { DiReact, DiAngularSimple } from "react-icons/di";
 import { VscAzure, VscAzureDevops } from "react-icons/vsc";
 import { SiPowershell, SiCsharp, SiMicrosoftsharepoint, SiPowerautomate } from "react-icons/si";
+import { AiOutlineConsoleSql } from "react-icons/ai";
 
 const Tecnologies = () => {
   return (
@@ -14,6 +15,7 @@ const Tecnologies = () => {
             <SiCsharp title='.NET'/>
             <DiAngularSimple title='Angular'/>
             <VscAzure title='Azure'/>
+            <AiOutlineConsoleSql title='SQL'/>
             <SiPowershell title='Powershell'/>
             <VscAzureDevops title='DevOps'/>
             <SiMicrosoftsharepoint title="Sharepoint Online"/>
