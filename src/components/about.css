@@ -21,6 +21,8 @@
     display: inline-flex;
     flex-wrap: wrap;
     gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-skill-item, .about-skill-item *{
@@ -33,12 +35,14 @@
     box-shadow: 0px 0px 15px lightgray;
     border: 1px solid #ededed;
     border-radius: 25px;
+    overflow: hidden;
 }
 
 .about-skill-item-content{
     margin-top: 4rem;
     width: 100%;
     text-align: center;
+    transition: transform 0.75s ease;
 }
 
 .skill-title{
@@ -53,3 +57,7 @@
     margin-top: 1.5rem;
 }
 
+.about-skill-item-content:hover{
+    transform: scale(1.2);
+    
+}
