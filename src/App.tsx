@@ -1,40 +1,36 @@
 import React from 'react';
+import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import { Layout } from 'antd';
-import './App.css';
+import { BsLinkedin } from "react-icons/bs";
+import { AiFillInstagram } from "react-icons/ai";
+import { FiMenu } from "react-icons/fi";
 import About from './components/About';
-import Hero from './components/Hero'
+import Home from './components/Home';
+import Tecnologies from './components/Technologies';
+import WorkExperience from './components/WorkExperience';
+import Navigation from './components/Navigation';
 
 const { Header, Content, Footer } = Layout;
 
 function App() {
-
-
   return (
     <BrowserRouter>
       <Layout className='layout'>
       <Header className='header'>
-        
-      <div className='logo-container'>
-        <img className='logo' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-jR3imVo_HTPboBgj-9SE6REqz7y3wzaNtcY5r4Ml1Wj3iALlRaeEtF56sWulUJC4PSQ&usqp=CAU'></img>
-      </div>
-
-      <div className='anchor-container'>
-        <a className='anchor'>About</a>
-        <a className='anchor'>Projects</a>
-        <a className='anchor'>Contact</a>
-      </div>
+        <Navigation />
       </Header>
-      <Content>
-
-        <Hero />
-
+      <Content className='content'>
+        <Home/>
+        <About />
+        <Tecnologies />
+        <WorkExperience />
+       
       </Content>
-      <Footer
-        style={{
-          textAlign: 'center',
-        }}
-      >
+      <Footer className='footer'>
+       <h4>GoGalego</h4>
+        <a href='https://www.linkedin.com/in/gogalego22' target='_blank' rel="noreferrer"><BsLinkedin/></a>
+        <a href='https://www.instagram.com/gogalego' target='_blank' rel="noreferrer"><AiFillInstagram /></a>
       </Footer>
     </Layout>
     </BrowserRouter>

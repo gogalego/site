@@ -4,8 +4,8 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    background-color: black;
 }
-
 
 .header {
     padding-left: 4rem;
@@ -20,6 +20,10 @@
     position: fixed;
 }
 
+.header > * {
+    background-color: rgb(234, 234, 236);
+}
+
 .header-container {
     justify-content: space-between;
     align-items: center;
@@ -30,8 +34,6 @@
     margin-right: auto;
 }
 
-
-
-
-
-
+.ant-drawer{
+    background-color: transparent!important;
+}
