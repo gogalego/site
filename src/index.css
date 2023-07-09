@@ -34,8 +34,6 @@
     margin-right: auto;
 }
 
-
-
-
-
-
+.ant-drawer{
+    background-color: transparent!important;
+}

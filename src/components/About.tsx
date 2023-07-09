@@ -10,11 +10,11 @@ enum skillTitleEnum{
 }
 
 const description = 
-"Gonçalo Galego, a 28-year-old software developer with a passion for coding and problem-solving."
+"Gonçalo Galego, a 27-year-old software developer with a passion for coding and problem-solving."
 
 const About = () => {
   return (
-    <div className="about-container">
+    <div className="about-container" id="about">
       <h1>About Me</h1>
       <h2>I'm a Software Developer working from home</h2>
       <p className='about-description'>

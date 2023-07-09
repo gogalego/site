@@ -4,7 +4,7 @@
 - [x] Create About Section
 - [x] Create About Projects
 - [x] Create About Contacts
-- [ ] Create New Logo
+- [ ] Fix Bug Mobile Tecnologies
 - [ ] Choose Font Family
 - [ ] Add Animations
 - [ ] Add css Mobile

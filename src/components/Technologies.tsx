@@ -7,7 +7,7 @@ import { AiOutlineConsoleSql } from "react-icons/ai";
 
 const Tecnologies = () => {
   return (
-    <div className="tec-container">
+    <div className="tec-container" id="tecnologies">
       <h1>Tecnologies</h1>
 
         <div className='tec-list'>

@@ -6,6 +6,8 @@
     max-height: "100%";
     overflow: hidden;
     justify-content: space-between;
+    font-size: 2.2rem;
+    background-color: black;
 }
 
 .logo-container{
@@ -68,5 +70,11 @@ h4{
     display: inline-flex;
     justify-content: center;
     gap: 0.5rem;
+}
+
+.header{
+    padding-left: 1.5rem!important;
+    padding-right: 1.5rem!important;
+    background-color: transparent;
 }
 

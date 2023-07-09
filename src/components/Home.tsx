@@ -34,7 +34,7 @@ const Home = () => {
   }, [jobTitle]);
 
   return (
-    <div className="home-container">
+    <div className="home-container" id="home">
       <div className="home-profile">
         <div className='home-profile-description'>
             <p>Hello!</p>

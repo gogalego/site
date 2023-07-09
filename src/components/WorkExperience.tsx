@@ -21,7 +21,7 @@ const experienceData = [
 
 const WorkExperience = () => {
   return (
-    <div className="work-container">
+    <div className="work-container" id="workExperience">
       <h1>Work Experience</h1>
 
       <div className="work-list">
