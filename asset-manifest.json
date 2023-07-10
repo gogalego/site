@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/gogalego/site/static/css/main.6d5c572c.css",
+    "main.js": "/gogalego/site/static/js/main.f9c67fd3.js",
+    "static/js/787.534494fd.chunk.js": "/gogalego/site/static/js/787.534494fd.chunk.js",
+    "static/media/profile.png": "/gogalego/site/static/media/profile.f7025196b7191acee0ec.png",
+    "index.html": "/gogalego/site/index.html",
+    "main.6d5c572c.css.map": "/gogalego/site/static/css/main.6d5c572c.css.map",
+    "main.f9c67fd3.js.map": "/gogalego/site/static/js/main.f9c67fd3.js.map",
+    "787.534494fd.chunk.js.map": "/gogalego/site/static/js/787.534494fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d5c572c.css",
+    "static/js/main.f9c67fd3.js"
+  ]
+}
