@@ -5,7 +5,7 @@
 - [x] Create About Projects
 - [x] Create About Contacts
 - [ ] Fix Bug Mobile Tecnologies
-- [ ] Choose Font Family
+- [x] Choose Font Family
 - [ ] Add Animations
 - [ ] Add css Mobile
 - [ ] Add Lazy Loading Profile Image
