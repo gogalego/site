@@ -45,9 +45,13 @@
     font-size: 35px;
 }
 
+.home-profile-socials{
+    margin: 0.5rem;
+}
+
 .home-profile-socials> *{
-    font-size: 1.2rem;
-    margin: 0.1rem;
+    font-size: 2rem;
+    margin: 0.2rem;
 }
 
 .home-profile-socials> a > svg{
