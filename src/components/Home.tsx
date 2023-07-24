@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './home.css';
 import profileImage from '../assets/images/profile.png';
+import { BsLinkedin, BsInstagram } from "react-icons/bs";
 
 enum jobTitleEnum{
   SoftwareDeveloper = "SoftwareDeveloper",
@@ -49,6 +50,11 @@ const Home = () => {
             </p>
             <p className='jobTitle' style={jobTitle === jobTitleEnum.BackEnd? {display:'block'}:{display:'none'}}>
               {jobTitleEnum.BackEnd}
+            </p>
+
+            <p className='home-profile-socials'>
+              <a href='https://www.linkedin.com/in/gogalego22' target='_blank' rel="noreferrer"><BsLinkedin/></a>
+              <a href='https://www.instagram.com/gogalego' target='_blank' rel="noreferrer"><BsInstagram /></a>
             </p>
 
         </div>
