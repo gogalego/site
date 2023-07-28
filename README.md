@@ -1,17 +1,5 @@
-# Tasks
-
-- [x] Create Header
-- [x] Create About Section
-- [x] Create About Projects
-- [x] Create About Contacts
-- [ ] Fix Bug Mobile Tecnologies
-- [x] Choose Font Family
-- [ ] Add Animations
-- [ ] Add css Mobile
-- [ ] Add Lazy Loading Profile Image
-- [ ] ...
-
-
+# Live
+https://gogalego.com
 
 ## Tools
 
