@@ -78,3 +78,6 @@ h4{
     background-color: transparent;
 }
 
+.navigation-container > svg{
+    background-color: transparent!important;
+}
