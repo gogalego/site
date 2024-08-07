@@ -38,10 +38,25 @@
 .home-profile-description > * {
     background-color: #ededed;
     transition: font-size 0.5s;
+    color: rgb(100 100 100);
+    letter-spacing: 4px;
 }
 
 .home-profile-description > *:hover {
     font-size: 35px;
+}
+
+.home-profile-socials{
+    margin: 0.5rem;
+}
+
+.home-profile-socials> *{
+    font-size: 2rem;
+    margin: 0.2rem;
+}
+
+.home-profile-socials> a > svg{
+    background-color: transparent!important;
 }
 
 .home-profile-photo-container{

@@ -1,10 +1,8 @@
-import React from 'react';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import { Layout } from 'antd';
 import { BsLinkedin } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
-import { FiMenu } from "react-icons/fi";
 import About from './components/About';
 import Home from './components/Home';
 import Tecnologies from './components/Technologies';
