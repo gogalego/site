@@ -29,11 +29,11 @@
 
 .tec-list >svg:hover{
     transform: scale(1.2);
-    transition: transform 0.5s;
 }
 
 .tec-list > svg{
     box-shadow: 0px 0px 15px lightgray;
     border-radius: 2rem;
     padding: 1rem;
+    transition: transform 0.7s;
 }
