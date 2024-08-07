@@ -13,7 +13,6 @@
     justify-content: center;
     display: inline-flex;
     flex-wrap: wrap;
-    transition: transform 0.75s ease;
 }
 
 
@@ -30,6 +29,7 @@
 
 .tec-list >svg:hover{
     transform: scale(1.2);
+    transition: transform 0.5s;
 }
 
 .tec-list > svg{

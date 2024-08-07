@@ -9,8 +9,9 @@ enum skillTitleEnum{
   DevOps = 'DevOps'
 }
 
-const description = 
-"Gonçalo Galego, a 27-year-old software developer with a passion for coding and problem-solving."
+const description =
+`Hello! I'm Gonçalo Galego, a 28-year-old software developer with a passion for coding and problem-solving. 
+I specialize in full stack development and my goals is to create efficient and effective software solutions that make a difference.`
 
 const About = () => {
   return (

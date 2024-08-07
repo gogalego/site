@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './home.css';
 import profileImage from '../assets/images/profile.png';
-import { BsLinkedin, BsInstagram } from "react-icons/bs";
+import { BsLinkedin, BsInstagram, BsFillFileEarmarkPersonFill  } from "react-icons/bs";
 
 enum jobTitleEnum{
-  SoftwareDeveloper = "SoftwareDeveloper",
+  SoftwareDeveloper = "Software Developer",
   FrontEnd ='Front-End',
   BackEnd ='Back-End'
 }
@@ -55,6 +55,7 @@ const Home = () => {
             <p className='home-profile-socials'>
               <a href='https://www.linkedin.com/in/gogalego22' target='_blank' rel="noreferrer"><BsLinkedin/></a>
               <a href='https://www.instagram.com/gogalego' target='_blank' rel="noreferrer"><BsInstagram /></a>
+              <a href='https://drive.google.com/uc?export=download&id=1LM4D0w59q7JmocUE74zaCmp0tBz4gqbG' target='_blank' rel="noreferrer"><BsFillFileEarmarkPersonFill /></a>
             </p>
 
         </div>

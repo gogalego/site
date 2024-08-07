@@ -11,6 +11,9 @@
 .about-description{
     letter-spacing: 1px;
     text-align: justify;
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
 }
 
 .about-skills-container{
