@@ -1,39 +1,38 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    background-color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: black;
 }
 
 .header {
-    padding-left: 4rem;
-    padding-right: 4rem; 
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    align-items: center;
-    width: 100%;
-    display: flex;
-    z-index: 20;
-    top: 0px;
-    position: fixed;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  z-index: 20;
+  top: 0px;
+  position: fixed;
 }
 
 .header > * {
-    background-color: rgb(234, 234, 236);
+  background-color: rgb(234, 234, 236);
 }
 
 .header-container {
-    justify-content: space-between;
-    align-items: center;
-    max-width: 80rem;
-    width: 100%;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80rem;
+  width: 100%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.ant-drawer{
-    background-color: transparent!important;
+.ant-drawer {
+  background-color: transparent !important;
 }
