@@ -1,15 +1,14 @@
-import "./App.css";
-import { BrowserRouter } from "react-router-dom";
-import { Layout } from "antd";
-import { BsLinkedin } from "react-icons/bs";
-import { AiFillInstagram } from "react-icons/ai";
-import About from "./components/About";
-import Home from "./components/Home";
-import Tecnologies from "./components/Technologies";
-import WorkExperience from "./components/WorkExperience";
-import Navigation from "./components/Navigation";
+import './App.css'
+import { BrowserRouter } from 'react-router-dom'
+import { Layout } from 'antd'
+import { BsLinkedin } from 'react-icons/bs'
+import { AiFillInstagram } from 'react-icons/ai'
+import About from './components/About/About'
+import Home from './components/Home/Home'
+import WorkExperience from './components/WorkExperience/WorkExperience'
+import Navigation from './components/Navigation/Navigation'
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content, Footer } = Layout
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
         <Content className="content">
           <Home />
           <About />
-          <Tecnologies />
           <WorkExperience />
         </Content>
         <Footer className="footer">
@@ -43,7 +41,7 @@ function App() {
         </Footer>
       </Layout>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

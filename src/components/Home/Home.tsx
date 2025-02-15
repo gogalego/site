@@ -1,41 +1,41 @@
-import React, { useState, useEffect } from "react";
-import "./home.css";
-import profileImage from "../assets/images/profile.png";
+import { useState, useEffect } from 'react'
+import './home.css'
+import profileImage from '../../assets/images/profile.png'
 import {
   BsLinkedin,
   BsInstagram,
   BsFillFileEarmarkPersonFill,
-} from "react-icons/bs";
+} from 'react-icons/bs'
 
 enum jobTitleEnum {
-  SoftwareDeveloper = "Software Developer",
-  FrontEnd = "Front-End",
-  BackEnd = "Back-End",
+  SoftwareDeveloper = 'Software Developer',
+  FrontEnd = 'Front-End',
+  BackEnd = 'Back-End',
 }
 
 const Home = () => {
-  const [jobTitle, setJobTitle] = useState(jobTitleEnum.SoftwareDeveloper);
+  const [jobTitle, setJobTitle] = useState(jobTitleEnum.SoftwareDeveloper)
 
   const handleIndex = () => {
     switch (jobTitle) {
       case jobTitleEnum.SoftwareDeveloper:
-        setJobTitle(jobTitleEnum.FrontEnd);
-        break;
+        setJobTitle(jobTitleEnum.FrontEnd)
+        break
       case jobTitleEnum.FrontEnd:
-        setJobTitle(jobTitleEnum.BackEnd);
-        break;
+        setJobTitle(jobTitleEnum.BackEnd)
+        break
       case jobTitleEnum.BackEnd:
-        setJobTitle(jobTitleEnum.SoftwareDeveloper);
-        break;
+        setJobTitle(jobTitleEnum.SoftwareDeveloper)
+        break
       default:
-        setJobTitle(jobTitleEnum.SoftwareDeveloper);
-        break;
+        setJobTitle(jobTitleEnum.SoftwareDeveloper)
+        break
     }
-  };
+  }
 
   useEffect(() => {
-    setTimeout(handleIndex, 5000);
-  }, [jobTitle]);
+    setTimeout(handleIndex, 5000)
+  }, [jobTitle])
 
   return (
     <div className="home-container" id="home">
@@ -48,8 +48,8 @@ const Home = () => {
             className="jobTitle"
             style={
               jobTitle === jobTitleEnum.SoftwareDeveloper
-                ? { display: "block" }
-                : { display: "none" }
+                ? { display: 'block' }
+                : { display: 'none' }
             }
           >
             {jobTitleEnum.SoftwareDeveloper}
@@ -58,8 +58,8 @@ const Home = () => {
             className="jobTitle"
             style={
               jobTitle === jobTitleEnum.FrontEnd
-                ? { display: "block" }
-                : { display: "none" }
+                ? { display: 'block' }
+                : { display: 'none' }
             }
           >
             {jobTitleEnum.FrontEnd}
@@ -68,8 +68,8 @@ const Home = () => {
             className="jobTitle"
             style={
               jobTitle === jobTitleEnum.BackEnd
-                ? { display: "block" }
-                : { display: "none" }
+                ? { display: 'block' }
+                : { display: 'none' }
             }
           >
             {jobTitleEnum.BackEnd}
@@ -104,7 +104,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

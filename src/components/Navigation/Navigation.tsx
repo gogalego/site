@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import "./navigation.css";
-import { Drawer } from "antd";
-import { FiMenu } from "react-icons/fi";
-import { IoMdClose } from "react-icons/io";
+import React, { useState } from 'react'
+import './navigation.css'
+import { Drawer } from 'antd'
+import { FiMenu } from 'react-icons/fi'
+import { IoMdClose } from 'react-icons/io'
 
 const Navigation = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   return (
     <div className="navigation-container">
@@ -34,7 +34,7 @@ const Navigation = () => {
         </div>
       </Drawer>
     </div>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

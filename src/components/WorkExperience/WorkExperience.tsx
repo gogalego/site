@@ -1,23 +1,23 @@
-import React from "react";
-import "./workExperience.css";
+import React from 'react'
+import './workExperience.css'
 
 const experienceData = [
   {
-    date: "October, 2018 - Now",
-    title: "Software Developer",
-    company: "Devscope, Porto",
+    date: 'October, 2018 - Now',
+    title: 'Software Developer',
+    company: 'Devscope, Porto',
   },
   {
-    date: "February, 2018 - September, 2018",
-    title: "Software Developer Internship",
-    company: "Devscope, Porto",
+    date: 'February, 2018 - September, 2018',
+    title: 'Software Developer Internship',
+    company: 'Devscope, Porto',
   },
   {
-    date: "September, 2015 - September, 2018",
-    title: "Computer Science Bachelor",
-    company: "ISEP, Porto",
+    date: 'September, 2015 - September, 2018',
+    title: 'Computer Science Bachelor',
+    company: 'ISEP, Porto',
   },
-];
+]
 
 const WorkExperience = () => {
   return (
@@ -34,11 +34,11 @@ const WorkExperience = () => {
                 <div className="work-list-item-company">{item.company}</div>
               </div>
             </div>
-          );
+          )
         })}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default WorkExperience;
+export default WorkExperience
