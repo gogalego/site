@@ -25,11 +25,11 @@ const Navigation = () => {
           <a href="#about" onClick={() => setOpen(false)}>
             About
           </a>
-          <a href="#tecnologies" onClick={() => setOpen(false)}>
-            Tecnologies
-          </a>
           <a href="#workExperience" onClick={() => setOpen(false)}>
             Work Experience
+          </a>
+          <a href="#projects" onClick={() => setOpen(false)}>
+            Projects
           </a>
         </div>
       </Drawer>

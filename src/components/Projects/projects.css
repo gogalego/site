@@ -1,0 +1,15 @@
+.projects-container {
+  padding: 5rem;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.projects-container > * {
+  color: white;
+}
+
+.projects-list {
+  margin-top: 5rem;
+  display: flex;
+  gap: 2rem;
+}

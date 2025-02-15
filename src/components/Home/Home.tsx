@@ -16,6 +16,7 @@ enum jobTitleEnum {
 const Home = () => {
   const [jobTitle, setJobTitle] = useState(jobTitleEnum.SoftwareDeveloper)
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleIndex = () => {
     switch (jobTitle) {
       case jobTitleEnum.SoftwareDeveloper:
@@ -35,7 +36,7 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(handleIndex, 5000)
-  }, [jobTitle])
+  }, [handleIndex, jobTitle])
 
   return (
     <div className="home-container" id="home">

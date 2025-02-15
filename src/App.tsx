@@ -7,6 +7,7 @@ import About from './components/About/About'
 import Home from './components/Home/Home'
 import WorkExperience from './components/WorkExperience/WorkExperience'
 import Navigation from './components/Navigation/Navigation'
+import Projects from './components/Projects/Projects'
 
 const { Header, Content, Footer } = Layout
 
@@ -21,6 +22,7 @@ function App() {
           <Home />
           <About />
           <WorkExperience />
+          <Projects />
         </Content>
         <Footer className="footer">
           <h4>GoGalego</h4>
