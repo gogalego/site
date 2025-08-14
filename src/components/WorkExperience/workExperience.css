@@ -1,60 +1,158 @@
-.work-container {
-  padding: 5rem;
-  height: 100vh;
+.work-experience-container {
   min-height: 100vh;
+  padding: var(--space-20) var(--space-8);
+  background: var(--bg-primary);
 }
 
-.work-container > * {
-  color: white;
+.work-experience-content {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.work-list {
-  margin-top: 5rem;
+.work-experience-title {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-16);
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.work-list-item {
-  margin: 2rem;
-  width: 100%;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #717171;
+.work-experience-timeline {
+  position: relative;
+  padding-left: var(--space-8);
+}
+
+.work-experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: var(--space-4);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-primary), var(--bg-secondary));
+}
+
+.work-experience-item {
+  position: relative;
+  margin-bottom: var(--space-12);
+  background: var(--bg-card);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  transition: var(--transition-normal);
+  margin-left: var(--space-8);
+}
+
+.work-experience-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(79, 70, 229, 0.2);
+  border-color: var(--accent-primary);
+}
+
+.work-experience-item::before {
+  content: '';
+  position: absolute;
+  left: -46px;
+  top: var(--space-6);
+  width: 12px;
+  height: 12px;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 0 3px var(--accent-primary);
+}
+
+.work-experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.work-experience-company {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.work-experience-position {
+  font-size: var(--font-size-lg);
+  color: var(--accent-primary);
+  margin: 0;
+  font-weight: 500;
+}
+
+.work-experience-duration {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+}
+
+.work-experience-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.work-experience-technologies {
   display: flex;
   flex-wrap: wrap;
+  gap: var(--space-2);
 }
 
-.work-list-item-date {
-  width: 60%;
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: lightgray;
+.work-experience-tech {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  transition: var(--transition-normal);
 }
 
-.work-list-item-resume {
-  width: 40%;
+.work-experience-tech:hover {
+  background: var(--accent-primary);
+  color: white;
+  transform: scale(1.05);
 }
 
-.work-list-item-title {
-  font-family: Poppins, sans-serif;
-  font-weight: 800;
-  font-size: 1.4rem;
-}
-
-.work-list-item-company {
-  font-family: Poppins, sans-serif;
-  font-weight: 400;
-  font-size: 1.1rem;
-}
-
-@media only screen and (max-width: 960px) {
-  .work-list-item-date {
-    width: 100%;
+@media (max-width: 768px) {
+  .work-experience-container {
+    padding: var(--space-12) var(--space-4);
   }
 
-  .work-list-item-resume {
-    width: 100%;
+  .work-experience-timeline {
+    padding-left: var(--space-4);
   }
 
-  .work-list-item {
-    margin: 1rem;
+  .work-experience-item {
+    margin-left: var(--space-4);
+  }
+
+  .work-experience-item::before {
+    left: -22px;
+  }
+
+  .work-experience-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .work-experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .work-experience-company {
+    font-size: var(--font-size-xl);
   }
 }
