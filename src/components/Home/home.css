@@ -1,158 +1,213 @@
 .home-container {
-  padding: 20px;
-  height: 100vh;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  padding-left: 10%;
-  padding-right: 10%;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-20) var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, rgba(79, 70, 229, 0.1) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .home-profile {
-  height: 100%;
+  max-width: 1200px;
   width: 100%;
-  background-color: white;
-  box-shadow: 0px 0px 15px lightgray;
-  display: inline-flex;
-  min-height: 20rem;
-  max-height: 40rem;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: var(--space-16);
+  align-items: center;
+  background: var(--bg-card);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-16);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-color);
+  position: relative;
+  z-index: 1;
 }
 
 .home-profile-description {
-  background-color: #ededed;
-  width: 100%;
-  height: 100%;
-  font-family: Poppins, sans-serif;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  text-align: center;
-  color: #bbb;
-  font-size: 2rem;
+  gap: var(--space-6);
+  color: var(--text-primary);
+}
+
+.home-greeting {
+  font-size: var(--font-size-lg);
   font-weight: 400;
-  letter-spacing: 0.5px;
-  margin-bottom: 41px;
+  color: var(--text-secondary);
+  margin: 0;
 }
 
-.home-profile-description > * {
-  background-color: #ededed;
-  transition: font-size 0.5s;
-  color: rgb(100 100 100);
-  letter-spacing: 4px;
+.home-name {
+  font-size: var(--font-size-5xl);
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.home-profile-description > *:hover {
-  font-size: 35px;
+.home-job-title-container {
+  height: var(--space-16);
+  overflow: hidden;
+  position: relative;
+}
+
+.home-job-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--accent-primary);
+  margin: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-slow);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.home-job-title.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .home-profile-socials {
-  margin: 0.5rem;
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
 }
 
-.home-profile-socials > * {
-  font-size: 2rem;
-  margin: 0.2rem;
+.home-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+  transition: var(--transition-normal);
+  border: 1px solid var(--border-color);
 }
 
-.home-profile-socials > a > svg {
-  background-color: transparent !important;
+.home-social-link:hover {
+  background: var(--accent-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
 }
 
 .home-profile-photo-container {
-  width: 500px;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding: 0;
-  transition: transform 2s ease;
+  position: relative;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+}
+
+.home-profile-photo-wrapper {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--accent-primary);
+  box-shadow: 0 20px 60px rgba(79, 70, 229, 0.3);
+  transition: var(--transition-slow);
+}
+
+.home-profile-photo-wrapper:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 25px 80px rgba(79, 70, 229, 0.4);
 }
 
 .home-profile-photo {
   width: 100%;
-  position: relative;
-  transform: scale(1.5);
-  transition: transform 0.75s ease;
-
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
 }
 
-.home-profile-photo:hover {
-  transform: scale(1.75);
+.home-profile-photo-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(79, 70, 229, 0.1), transparent);
+  animation: shine 3s infinite;
+  pointer-events: none;
 }
 
-.jobTitle {
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
+@keyframes shine {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-@keyframes fadein {
+@keyframes fadeInUp {
   from {
     opacity: 0;
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
 }
 
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/*  Mobile   */
-@media only screen and (max-width: 960px) {
+@media (max-width: 1024px) {
   .home-profile {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-12);
+    padding: var(--space-12);
   }
 
-  .home-profile-description {
-    margin-bottom: 0px;
-    height: 50%;
+  .home-profile-photo-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: var(--space-12) var(--space-4);
   }
 
-  .home-profile-photo {
-    width: 100%;
+  .home-profile {
+    padding: var(--space-8);
   }
 
-  .home-profile-photo-container {
-    width: 100%;
+  .home-name {
+    font-size: var(--font-size-4xl);
+  }
+
+  .home-job-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .home-profile-photo-wrapper {
+    width: 240px;
+    height: 240px;
   }
 }
