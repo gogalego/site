@@ -1,5 +1,5 @@
 /* filepath: src/components/Home/Home.tsx */
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import './home.css'
 import profileImage from '../../assets/images/profile.png'
 import {
@@ -18,7 +18,7 @@ const Home = () => {
   const [jobTitle, setJobTitle] = useState(jobTitleEnum.SoftwareDeveloper)
   const [isVisible, setIsVisible] = useState(true)
 
-  const handleIndex = () => {
+  const handleIndex = useCallback(() => {
     setIsVisible(false)
     setTimeout(() => {
       switch (jobTitle) {
@@ -37,12 +37,12 @@ const Home = () => {
       }
       setIsVisible(true)
     }, 300)
-  }
+  }, [jobTitle])
 
   useEffect(() => {
     const interval = setInterval(handleIndex, 3000)
     return () => clearInterval(interval)
-  }, [jobTitle])
+  }, [handleIndex])
 
   return (
     <div className="home-container" id="home">
@@ -50,7 +50,7 @@ const Home = () => {
         <div className="home-profile-description">
           <p className="home-greeting">Hello! I'm</p>
           <h1 className="home-name">Gonçalo Galego</h1>
-          
+
           <div className="home-job-title-container">
             <p className={`home-job-title ${isVisible ? 'visible' : ''}`}>
               {jobTitle}
@@ -84,7 +84,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-        
+
         <div className="home-profile-photo-container">
           <div className="home-profile-photo-wrapper">
             <img className="home-profile-photo" src={profileImage} alt="Gonçalo Galego" />

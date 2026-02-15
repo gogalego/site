@@ -4,9 +4,9 @@ import './about.css'
 
 const About = () => {
   const skills = {
-    frontend: ['React', 'Angular', 'Blazor','TypeScript', 'JavaScript', 'Tailwind CSS', 'Jest'],
+    frontend: ['React', 'Angular', 'Blazor', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Jest'],
     backend: ['.NET', 'Rabbitmq', 'REST APIs', 'Clean Architecture'],
-    database: ['MongoDB', 'PostgreSQL', 'SQL'],
+    database: ['MongoDB', 'PostgreSQL', 'SQL', 'DynamoDB'],
     tools: ['Git', 'Docker', 'Azure', 'VS Code', 'Figma', 'Postman']
   }
 
@@ -16,12 +16,12 @@ const About = () => {
         <div className="about-text">
           <h2 className="about-title">About Me</h2>
           <p className="about-description">
-            I'm a passionate software developer with a love for creating efficient, 
-            scalable, and user-friendly applications. With experience in both frontend 
-            and backend development, I enjoy tackling complex problems and turning 
+            I'm a passionate software developer with a love for creating efficient,
+            scalable, and user-friendly applications. With experience in both frontend
+            and backend development, I enjoy tackling complex problems and turning
             ideas into reality through code.
           </p>
-          
+
           <div className="about-skills">
             <div className="about-skill-category">
               <h3 className="about-skill-title">Frontend</h3>
@@ -31,7 +31,7 @@ const About = () => {
                 ))}
               </div>
             </div>
-            
+
             <div className="about-skill-category">
               <h3 className="about-skill-title">Backend</h3>
               <div className="about-skill-list">
@@ -40,7 +40,7 @@ const About = () => {
                 ))}
               </div>
             </div>
-            
+
             <div className="about-skill-category">
               <h3 className="about-skill-title">Database</h3>
               <div className="about-skill-list">
@@ -49,7 +49,7 @@ const About = () => {
                 ))}
               </div>
             </div>
-            
+
             <div className="about-skill-category">
               <h3 className="about-skill-title">Tools & Others</h3>
               <div className="about-skill-list">
@@ -60,7 +60,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="about-visual">
           <div className="about-decoration"></div>
         </div>

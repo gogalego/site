@@ -6,19 +6,27 @@ const WorkExperience = () => {
   const experienceData = [
     {
       id: 1,
-      company: 'Devscope',
+      company: 'IVC Evidensia',
       position: 'Software Developer',
-      duration: '2018 - Present',
-      description: 'Worked on multiple projects in a full stack role, developing both frontend and backend solutions.',
-      technologies: ['.NET','React', 'TypeScript', 'SQL', 'PostgreSQL', 'Tailwind CSS', 'Azure']
+      duration: '2025 - Present',
+      description: 'Leading the modernization of the front office application, migrating from legacy systems to a modern architecture using React, .NET, and AWS cloud services.',
+      technologies: ['.NET', 'React', 'AWS', 'DynamoDB', 'TypeScript']
     },
     {
       id: 2,
+      company: 'Devscope',
+      position: 'Software Developer',
+      duration: '2018 - 2025',
+      description: 'Worked on multiple projects in a full stack role, developing both frontend and backend solutions.',
+      technologies: ['.NET', 'React', 'TypeScript', 'SQL', 'PostgreSQL', 'Tailwind CSS', 'Azure']
+    },
+    {
+      id: 3,
       company: 'ISEP - Porto',
       position: 'Computer Science Bachelor',
       duration: '2015 - 2018',
       description: 'Developed and maintained multiple client websites and web applications. Worked with both frontend and backend technologies to deliver complete solutions.',
-      technologies: ['Java', 'C','C++','C#', 'MongoDB', 'Angular']
+      technologies: ['Java', 'C', 'C++', 'C#', 'MongoDB', 'Angular']
     }
   ]
 
@@ -26,7 +34,7 @@ const WorkExperience = () => {
     <div className="work-experience-container" id="workExperience">
       <div className="work-experience-content">
         <h2 className="work-experience-title">Work Experience</h2>
-        
+
         <div className="work-experience-timeline">
           {experienceData.map((experience) => (
             <div key={experience.id} className="work-experience-item">
@@ -37,11 +45,11 @@ const WorkExperience = () => {
                 </div>
                 <span className="work-experience-duration">{experience.duration}</span>
               </div>
-              
+
               <p className="work-experience-description">
                 {experience.description}
               </p>
-              
+
               <div className="work-experience-technologies">
                 {experience.technologies.map((tech, index) => (
                   <span key={index} className="work-experience-tech">
