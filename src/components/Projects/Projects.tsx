@@ -29,7 +29,7 @@ const projects = [
     {
     id: 3,
     title: 'CatCleaner',
-    description: 'A mobile app to clean your images from your gallery',
+    description: 'A mobile app to clean up images in your gallery',
     technologies: ['Kotlin'],
     liveUrl: 'https://catcleaner.gogalego.com',
     image: CatCleanerIMG,
