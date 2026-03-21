@@ -3,6 +3,7 @@ import { FiExternalLink } from 'react-icons/fi'
 
 import TaskasIMG from '../../assets/images/taskasPreview.png'
 import DDrawerIMG from '../../assets/images/dDrawerPreview.gif'
+import CatCleanerIMG from '../../assets/images/catCleanerPreview.png'
 
 const projects = [
   {
@@ -23,6 +24,16 @@ const projects = [
     liveUrl: 'https://ddrawer.gogalego.com',
     image: DDrawerIMG,
     objectFit: 'contain',
+    buttonLabel: 'Website'
+  },
+    {
+    id: 3,
+    title: 'CatCleaner',
+    description: 'A mobile app to clean your images from your gallery',
+    technologies: ['Kotlin'],
+    liveUrl: 'https://catcleaner.gogalego.com',
+    image: CatCleanerIMG,
+    objectFit: 'cover',
     buttonLabel: 'Website'
   }
 ]
