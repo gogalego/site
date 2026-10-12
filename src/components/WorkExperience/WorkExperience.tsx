@@ -38,24 +38,24 @@ const WorkExperience = () => {
         <div className="work-experience-timeline">
           {experienceData.map((experience) => (
             <div key={experience.id} className="work-experience-item">
-              <div className="work-experience-header">
-                <div>
+              <span className="work-experience-duration">{experience.duration}</span>
+              <div className="work-experience-body">
+                <div className="work-experience-header">
                   <h3 className="work-experience-company">{experience.company}</h3>
                   <h4 className="work-experience-position">{experience.position}</h4>
                 </div>
-                <span className="work-experience-duration">{experience.duration}</span>
-              </div>
 
-              <p className="work-experience-description">
-                {experience.description}
-              </p>
+                <p className="work-experience-description">
+                  {experience.description}
+                </p>
 
-              <div className="work-experience-technologies">
-                {experience.technologies.map((tech, index) => (
-                  <span key={index} className="work-experience-tech">
-                    {tech}
-                  </span>
-                ))}
+                <div className="work-experience-technologies">
+                  {experience.technologies.map((tech, index) => (
+                    <span key={index} className="work-experience-tech">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

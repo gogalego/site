@@ -4,6 +4,13 @@ import './navigation.css'
 import { FiMenu } from 'react-icons/fi'
 import { IoMdClose } from 'react-icons/io'
 
+const links = [
+  { href: '#home', label: 'Home', index: '01' },
+  { href: '#about', label: 'About', index: '02' },
+  { href: '#workExperience', label: 'Work Experience', index: '03' },
+  { href: '#projects', label: 'Projects', index: '04' },
+]
+
 const Navigation = () => {
   const [open, setOpen] = useState(false)
 
@@ -16,23 +23,18 @@ const Navigation = () => {
     }
 
     if (open) {
-      // Add event listener for ESC key
       document.addEventListener('keydown', handleEscKey)
-      
-      // Prevent body scroll and add class for styling
       document.body.classList.add('navigation-open')
       document.body.style.overflow = 'hidden'
       document.body.style.position = 'fixed'
       document.body.style.width = '100%'
     } else {
-      // Remove body scroll prevention
       document.body.classList.remove('navigation-open')
       document.body.style.overflow = ''
       document.body.style.position = ''
       document.body.style.width = ''
     }
 
-    // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleEscKey)
       document.body.classList.remove('navigation-open')
@@ -55,75 +57,79 @@ const Navigation = () => {
   }
 
   const handleOverlayClick = (e: React.MouseEvent) => {
-    // Only close if clicking on the overlay itself, not the drawer
     if (e.target === e.currentTarget) {
       setOpen(false)
     }
   }
 
-  // Prevent drawer click from closing the navigation
   const handleDrawerClick = (e: React.MouseEvent) => {
     e.stopPropagation()
   }
 
   return (
     <div className="navigation-container">
-      <FiMenu 
-        className="navigation-menu-icon" 
+      <a href="#home" className="header-wordmark">
+        Go<em>Galego</em>
+      </a>
+
+      <nav className="navigation-inline" aria-label="Primary">
+        {links.map((link) => (
+          <a key={link.href} href={link.href} className="navigation-inline-link">
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <button
+        type="button"
+        className="navigation-menu-button"
         onClick={openDrawer}
         aria-label="Open navigation menu"
-      />
-      
-      {/* Custom Drawer with Overlay */}
+        aria-expanded={open}
+      >
+        <FiMenu className="navigation-menu-icon" aria-hidden="true" />
+      </button>
+
       {open && (
-        <div 
-          className={`navigation-overlay ${open ? 'open' : ''}`} 
+        <div
+          className={`navigation-overlay ${open ? 'open' : ''}`}
           onClick={handleOverlayClick}
         >
-          <div 
+          <div
             className={`navigation-drawer ${open ? 'open' : ''}`}
             onClick={handleDrawerClick}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site navigation"
           >
             <div className="navigation-header">
+              <span className="navigation-shelf-label">Menu</span>
               <button
-                className="navigation-close" 
+                className="navigation-close"
                 onClick={closeDrawer}
                 aria-label="Close navigation menu"
               >
                 <IoMdClose />
               </button>
             </div>
-            
+
             <div className="navigation-links">
-              <a 
-                href="#home" 
-                className="navigation-link" 
-                onClick={handleLinkClick}
-              >
-                <span className="navigation-link-text">Home</span>
-              </a>
-              <a 
-                href="#about" 
-                className="navigation-link" 
-                onClick={handleLinkClick}
-              >
-                <span className="navigation-link-text">About</span>
-              </a>
-              <a 
-                href="#workExperience" 
-                className="navigation-link" 
-                onClick={handleLinkClick}
-              >
-                <span className="navigation-link-text">Work Experience</span>
-              </a>
-              <a 
-                href="#projects" 
-                className="navigation-link" 
-                onClick={handleLinkClick}
-              >
-                <span className="navigation-link-text">Projects</span>
-              </a>
+              {links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="navigation-link"
+                  onClick={handleLinkClick}
+                >
+                  <span className="navigation-link-index" aria-hidden="true">
+                    {link.index}
+                  </span>
+                  <span className="navigation-link-text">{link.label}</span>
+                </a>
+              ))}
             </div>
+
+            <p className="navigation-footnote">Gonçalo Galego</p>
           </div>
         </div>
       )}

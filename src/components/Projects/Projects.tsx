@@ -4,6 +4,7 @@ import { FiExternalLink } from 'react-icons/fi'
 import TaskasIMG from '../../assets/images/taskasPreview.png'
 import DDrawerIMG from '../../assets/images/dDrawerPreview.gif'
 import CatCleanerIMG from '../../assets/images/catCleanerPreview.png'
+import GalegoToolsIMG from '../../assets/images/galegotools.png'   
 
 const projects = [
   {
@@ -14,7 +15,7 @@ const projects = [
     liveUrl: 'https://www.taskas.pt/',
     image: TaskasIMG,
     objectFit: 'cover',
-    buttonLabel: 'Live Demo'
+    buttonLabel: 'Website'
   },
   {
     id: 2,
@@ -35,8 +36,18 @@ const projects = [
     image: CatCleanerIMG,
     objectFit: 'cover',
     buttonLabel: 'Website'
-  }
-]
+  },
+  {
+    id: 4,
+    title: 'GalegoTools',
+    description: 'A web app with a collection of useful tools for developers',
+    technologies: ['React'],
+    liveUrl: 'https://tools.gogalego.com',
+    image: GalegoToolsIMG,
+    objectFit: 'cover',
+    buttonLabel: 'Website'
+  },
+] 
 
 const Projects = () => {
 

@@ -20,29 +20,21 @@ function App() {
         </div>
       </header>
 
-      <main>
+      <main className="content">
         <Home />
         <About />
         <WorkExperience />
         <Projects />
       </main>
 
-      <footer style={{ 
-        textAlign: 'center', 
-        padding: 'var(--space-4)', 
-        background: 'var(--bg-secondary)',
-        borderTop: '1px solid var(--border-color)'
-      }}>
-        <div style={{ display: 'flex', gap: 'var(--space-4)', justifyContent: 'center', marginBottom: 'var(--space-4)' }}>
+      <footer className="site-footer">
+        <div className="site-footer-links">
           <a
             href="https://www.linkedin.com/in/gogalego22"
             target="_blank"
             rel="noreferrer"
-            style={{ 
-              color: 'var(--text-secondary)', 
-              fontSize: 'var(--font-size-2xl)',
-              transition: 'var(--transition-normal)'
-            }}
+            className="site-footer-link"
+            aria-label="LinkedIn profile"
           >
             <BsLinkedin />
           </a>
@@ -50,11 +42,8 @@ function App() {
             href="https://www.instagram.com/gogalego"
             target="_blank"
             rel="noreferrer"
-            style={{ 
-              color: 'var(--text-secondary)', 
-              fontSize: 'var(--font-size-2xl)',
-              transition: 'var(--transition-normal)'
-            }}
+            className="site-footer-link"
+            aria-label="Instagram profile"
           >
             <BsInstagram />
           </a>
@@ -62,15 +51,13 @@ function App() {
             href="https://drive.google.com/uc?export=download&id=1LM4D0w59q7JmocUE74zaCmp0tBz4gqbG"
             target="_blank"
             rel="noreferrer"
-            style={{ 
-              color: 'var(--text-secondary)', 
-              fontSize: 'var(--font-size-2xl)',
-              transition: 'var(--transition-normal)'
-            }}
+            className="site-footer-link"
+            aria-label="Download resume"
           >
             <BsFillFileEarmarkPersonFill />
           </a>
         </div>
+        <p className="site-footer-note">Gonçalo Galego</p>
       </footer>
     </div>
   )

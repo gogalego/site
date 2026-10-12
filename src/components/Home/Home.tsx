@@ -12,6 +12,7 @@ enum jobTitleEnum {
   SoftwareDeveloper = 'Software Developer',
   FrontEnd = 'Frontend Developer',
   BackEnd = 'Backend Developer',
+  AgentDeveloper = 'Agent Developer'
 }
 
 const Home = () => {
@@ -29,6 +30,9 @@ const Home = () => {
           setJobTitle(jobTitleEnum.BackEnd)
           break
         case jobTitleEnum.BackEnd:
+          setJobTitle(jobTitleEnum.AgentDeveloper)
+          break
+        case jobTitleEnum.AgentDeveloper:
           setJobTitle(jobTitleEnum.SoftwareDeveloper)
           break
         default:
@@ -46,10 +50,11 @@ const Home = () => {
 
   return (
     <div className="home-container" id="home">
+      <div className="home-inner">
       <div className="home-profile animate-fade-in-up">
         <div className="home-profile-description">
           <p className="home-greeting">Hello! I'm</p>
-          <h1 className="home-name">Gonçalo Galego</h1>
+          <h1 className="home-name">Gonçalo <span className="home-name-accent">Galego</span></h1>
 
           <div className="home-job-title-container">
             <p className={`home-job-title ${isVisible ? 'visible' : ''}`}>
@@ -63,6 +68,7 @@ const Home = () => {
               target="_blank"
               rel="noreferrer"
               className="home-social-link"
+              aria-label="LinkedIn profile"
             >
               <BsLinkedin size={20} />
             </a>
@@ -71,6 +77,7 @@ const Home = () => {
               target="_blank"
               rel="noreferrer"
               className="home-social-link"
+              aria-label="Instagram profile"
             >
               <BsInstagram size={20} />
             </a>
@@ -79,6 +86,7 @@ const Home = () => {
               target="_blank"
               rel="noreferrer"
               className="home-social-link"
+              aria-label="Download resume"
             >
               <BsFillFileEarmarkPersonFill size={20} />
             </a>
@@ -86,10 +94,9 @@ const Home = () => {
         </div>
 
         <div className="home-profile-photo-container">
-          <div className="home-profile-photo-wrapper">
-            <img className="home-profile-photo" src={profileImage} alt="Gonçalo Galego" />
-          </div>
+          <img className="home-portrait" src={profileImage} alt="Gonçalo Galego" width="300" height="300" />
         </div>
+      </div>
       </div>
     </div>
   )

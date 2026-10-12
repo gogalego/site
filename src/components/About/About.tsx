@@ -6,8 +6,8 @@ const About = () => {
   const skills = {
     frontend: ['React', 'Angular', 'Blazor', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Jest'],
     backend: ['.NET', 'Rabbitmq', 'REST APIs', 'Clean Architecture'],
-    database: ['MongoDB', 'PostgreSQL', 'SQL', 'DynamoDB'],
-    tools: ['Git', 'Docker', 'Azure', 'VS Code', 'Figma', 'Postman']
+    database: ['MongoDB', 'PostgreSQL', 'SQL', 'DynamoDB', 'Supabase'],
+    tools: ['Git', 'Docker', 'Azure', 'AWS', 'VS Code', 'Figma', 'Postman', 'Opencode']
   }
 
   return (
@@ -21,8 +21,9 @@ const About = () => {
             and backend development, I enjoy tackling complex problems and turning
             ideas into reality through code.
           </p>
+        </div>
 
-          <div className="about-skills">
+        <div className="about-skills">
             <div className="about-skill-category">
               <h3 className="about-skill-title">Frontend</h3>
               <div className="about-skill-list">
@@ -58,11 +59,6 @@ const About = () => {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="about-visual">
-          <div className="about-decoration"></div>
         </div>
       </div>
     </div>
