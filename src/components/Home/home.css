@@ -1,81 +1,100 @@
 .home-container {
-  min-height: 100vh;
+  min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: var(--space-20) var(--space-8);
+  padding: 72px 0 64px;
   position: relative;
   overflow: hidden;
 }
 
-.home-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(ellipse at center, rgba(79, 70, 229, 0.1) 0%, transparent 70%);
-  pointer-events: none;
+.home-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .home-profile {
-  max-width: 1200px;
+  max-width: none;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  gap: var(--space-16);
-  align-items: center;
-  background: var(--bg-card);
-  border-radius: var(--radius-2xl);
-  padding: var(--space-16);
-  box-shadow: var(--shadow-xl);
-  border: 1px solid var(--border-color);
-  position: relative;
-  z-index: 1;
+  display: contents;
 }
 
 .home-profile-description {
   display: flex;
   flex-direction: column;
-  gap: var(--space-6);
-  color: var(--text-primary);
+  align-items: flex-start;
+  gap: 20px;
+  color: var(--paper);
+}
+
+.home-profile-photo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.home-portrait {
+  width: min(300px, 80vw);
+  height: min(300px, 80vw);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--panel);
 }
 
 .home-greeting {
-  font-size: var(--font-size-lg);
-  font-weight: 400;
-  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--night);
+  background: var(--honey);
+  border-radius: 999px;
+  padding: 8px 16px;
   margin: 0;
 }
 
 .home-name {
-  font-size: var(--font-size-5xl);
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 4.6rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
   margin: 0;
-  background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--paper);
+  text-wrap: balance;
+}
+
+.home-name .home-name-accent {
+  font-style: italic;
+  color: var(--iris);
 }
 
 .home-job-title-container {
-  height: var(--space-16);
-  overflow: hidden;
-  position: relative;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  border-left: 3px solid var(--honey);
+  padding-left: 16px;
 }
 
 .home-job-title {
-  font-size: var(--font-size-2xl);
-  font-weight: 600;
-  color: var(--accent-primary);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--haze);
   margin: 0;
   opacity: 0;
-  transform: translateY(20px);
-  transition: all var(--transition-slow);
-  position: absolute;
-  top: 0;
-  left: 0;
+  transform: translateY(12px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
 .home-job-title.visible {
@@ -85,8 +104,8 @@
 
 .home-profile-socials {
   display: flex;
-  gap: var(--space-4);
-  margin-top: var(--space-6);
+  gap: 12px;
+  margin-top: 12px;
 }
 
 .home-social-link {
@@ -95,75 +114,23 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: var(--bg-secondary);
-  border-radius: var(--radius-lg);
-  color: var(--text-secondary);
-  transition: var(--transition-normal);
+  background: var(--panel);
+  border-radius: 14px;
+  color: var(--haze);
+  transition: border-color var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
   border: 1px solid var(--border-color);
 }
 
 .home-social-link:hover {
-  background: var(--accent-primary);
-  color: white;
+  color: var(--paper);
+  border-color: var(--iris);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
-}
-
-.home-profile-photo-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-profile-photo-wrapper {
-  position: relative;
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid var(--accent-primary);
-  box-shadow: 0 20px 60px rgba(79, 70, 229, 0.3);
-  transition: var(--transition-slow);
-}
-
-.home-profile-photo-wrapper:hover {
-  transform: scale(1.05) rotate(2deg);
-  box-shadow: 0 25px 80px rgba(79, 70, 229, 0.4);
-}
-
-.home-profile-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition-slow);
-}
-
-.home-profile-photo-wrapper::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(79, 70, 229, 0.1), transparent);
-  animation: shine 3s infinite;
-  pointer-events: none;
-}
-
-@keyframes shine {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -172,42 +139,28 @@
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out;
+  animation: fadeInUp 0.7s ease-out;
 }
 
-@media (max-width: 1024px) {
-  .home-profile {
+@media (max-width: 960px) {
+  .home-inner {
     grid-template-columns: 1fr;
-    text-align: center;
-    gap: var(--space-12);
-    padding: var(--space-12);
+    gap: 40px;
+    padding: 0 20px;
   }
 
-  .home-profile-photo-wrapper {
-    width: 280px;
-    height: 280px;
+  .home-portrait {
+    width: min(260px, 72vw);
+    height: min(260px, 72vw);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .home-container {
-    padding: var(--space-12) var(--space-4);
-  }
-
-  .home-profile {
-    padding: var(--space-8);
+    padding: 48px 0;
   }
 
   .home-name {
-    font-size: var(--font-size-4xl);
-  }
-
-  .home-job-title {
-    font-size: var(--font-size-xl);
-  }
-
-  .home-profile-photo-wrapper {
-    width: 240px;
-    height: 240px;
+    font-size: 3rem;
   }
 }
